@@ -130,7 +130,7 @@
     <img src="/JauConsulting/img/Clientes/SEDIME_SinFondo.png" alt="Sedime">
   </a>
   <a href="https://www.linkedin.com/company/zafranal/?originalSubdomain=pe" class="logo-card" target="_blank">
-    <img src="aasdasdasd/JauConsulting/img/Clientes/Zafranal_SinFondo.png" alt="Zafranal">
+    <img src="/JauConsulting/img/Clientes/Zafranal_SinFondo.png" alt="Zafranal">
   </a>
 </div>
 </section>
@@ -169,30 +169,18 @@
 <!-- CONTENIDO PRINCIPAL -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     
     <!-- FOOTER: Se insertará dinámicamente desde footer.html -->
     <footer id="footer-placeholder"></footer>
 
     
-    <script src="js/script.js"></script>
+    <script src="/JauConsulting/js/script.js"></script>
     <script>
       const header = document.getElementById("header-placeholder");
       const footer = document.getElementById("footer-placeholder");
 
       if (header) {
-        fetch("header.html")
+        fetch("/JauConsulting/header.html")
           .then(res => res.text())
           .then(data => {
             header.innerHTML = data;
@@ -201,7 +189,7 @@
       }
 
       if (footer) {
-        fetch("footer.html")
+        fetch("/JauConsulting/footer.html")
           .then(res => res.text())
           .then(data => {
             footer.innerHTML = data;
