@@ -6,7 +6,7 @@
   --secondary: #E6FFFC;
 
   /* 🌙 Modo Oscuro */
-  --bg-dark: #141010;
+  --bg-dark: #181818;
   --card-dark: #111827;
   --text-dark: #ccd6f6;
   --text-muted-dark: #a0aec0;
@@ -25,6 +25,11 @@
   --text: var(--text-dark);
   --text-muted: var(--text-muted-dark);
   --border: var(--border-dark);
+ --sidebar-bg-dark: #303030;
+  --sidebar-bg-light: #ffffff;
+  --sidebar-bg: var(--sidebar-bg-dark);
+
+
 }
 
 /* 🌗 Si el HTML tiene clase .light, cambiamos a modo claro */
@@ -104,6 +109,7 @@ html.light {
   --text-muted: var(--text-muted-light);
   --border: var(--border-light);
   --primary: #4FE5CE;
+  --sidebar-bg: var(--sidebar-bg-light);
 }
 
 /* 🌞 FONDO GENERAL */
@@ -205,7 +211,7 @@ html.light {
 .light .resume-btn {
   border: 2px solid var(--primary);
   color: var(--primary);
-  background-color: transparent;
+  background-color: var(--cta-boton-bg); /* 👈 ahora usa mismo fondo */
 }
 
 .light .resume-btn:hover {
@@ -419,7 +425,7 @@ header #logo-img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ffffff;
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -465,8 +471,9 @@ header #logo-img {
   right: -250px;
   width: 250px;
   height: 100%;
-  background-color: var(--bg);
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  background-color: var(--sidebar-bg);
+  color: var(--text);
+  box-shadow: -2px 0 4px rgba(48, 48, 48, 0.3);
   padding: 2rem 1rem;
   z-index: 1000;
   transform: translateX(100%);
@@ -474,11 +481,12 @@ header #logo-img {
   
   display: flex;
   flex-direction: column;
-  align-items: center;     /* 💡 Centra horizontalmente */
-  justify-content: center; /* 💡 Centra verticalmente */
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   text-align: center;
 }
+
 
 
 
@@ -510,13 +518,13 @@ header #logo-img {
 }
 
 .sidebar-links .section-number {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--primary);
   font-weight: bold;
 }
 
 .sidebar-links .sidebar-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -594,7 +602,7 @@ header #logo-img {
   align-items: center;
   justify-content: center;
   border: 2px solid var(--primary);
-  background: transparent;
+  background-color: var(--cta-boton-bg);  /* ← igual que “Leer más” */
   color: var(--primary);
 font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
@@ -605,11 +613,19 @@ font-family: 'Inter', sans-serif;
 }
 
 .sidebar-links .resume-btn:hover {
-  background-color: rgba(0, 255, 227, 0.1);
+  background-color: var(--cta-boton-hover); /* coherente con hover */
   box-shadow: 0 0 6px rgba(0, 255, 227, 0.4);
   transform: translateY(-2px);
 }
 
+/* Barra superior fija dentro del sidebar */
+.sidebar-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem; /* espacio con el primer enlace */
+}
 
 
 
@@ -876,7 +892,7 @@ main {
 .logo-card:hover {
   background-color: #ffffff; /* fondo blanco al pasar cursor */
   transform: translateY(-3px);
-   border: 2px solid #00e0ff; /* borde resaltado al hover */
+   border: 2px solid #01FFE3; /* borde resaltado al hover */
 }
 
 
@@ -952,15 +968,15 @@ html.light .clientes-grid img {
 
 /* 🌙 MODO OSCURO */
 html.dark .brochure-button {
-  color: #00cdb0;
-  border-color: #00cdb0;
+  color: var(--primary);
+  border-color: var(--primary);
   background-color: transparent;
 }
 
 html.dark .brochure-button:hover {
   padding: 14px 40px;
   background-color: rgba(0, 205, 176, 0.15);
-  color: #00cdb0;
+  color: var(--primary);
   box-shadow: 0 0 6px rgba(0, 205, 176, 0.4);
   transform: translateY(-2px);
 }

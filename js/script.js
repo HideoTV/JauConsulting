@@ -94,9 +94,16 @@ function inicializarHeader() {
   const menuToggle = document.getElementById("menu-toggle");
   const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("close-btn");
-  const themeToggle = document.getElementById("theme-toggle");
-  const logoImg = document.getElementById("logo-img");
-  const html = document.documentElement;
+
+
+const themeToggle = document.getElementById("theme-toggle");
+const themeToggleDrawer = document.getElementById("theme-toggle-drawer"); // nuevo
+const logoImg = document.getElementById("logo-img");
+const html = document.documentElement;
+
+
+
+
 
   // 🎛️ Abrir y cerrar el menú lateral
   if (menuToggle && sidebar && closeBtn) {
@@ -112,27 +119,42 @@ function inicializarHeader() {
   }
 
   // 🌗 Tema y logo
-  if (themeToggle && logoImg) {
-    const updateLogo = theme => {
-      logoImg.src = theme === "light"
-        ? "../img/LogoJauPNG - Negro.PNG"
-        : "../img/LogoJauPNG - Blanco.PNG";
-    };
+if ((themeToggle || themeToggleDrawer) && logoImg) {
+  const updateLogo = (theme) => {
+    logoImg.src = theme === "light"
+      ? "../img/LogoJauPNG - Negro.PNG"
+      : "../img/LogoJauPNG - Blanco.PNG";
+  };
 
-    const savedTheme = localStorage.getItem("theme") || "dark";
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  html.classList.remove("light", "dark");
+  html.classList.add(savedTheme);
+  if (themeToggle) themeToggle.checked = savedTheme === "light";
+  if (themeToggleDrawer) themeToggleDrawer.checked = savedTheme === "light";
+  updateLogo(savedTheme);
+
+  const setTheme = (theme) => {
     html.classList.remove("light", "dark");
-    html.classList.add(savedTheme);
-    themeToggle.checked = savedTheme === "light";
-    updateLogo(savedTheme);
+    html.classList.add(theme);
+    localStorage.setItem("theme", theme);
+    updateLogo(theme);
+    if (themeToggle) themeToggle.checked = theme === "light";
+    if (themeToggleDrawer) themeToggleDrawer.checked = theme === "light";
+  };
 
+  if (themeToggle) {
     themeToggle.addEventListener("change", () => {
-      const theme = themeToggle.checked ? "light" : "dark";
-      html.classList.remove("light", "dark");
-      html.classList.add(theme);
-      localStorage.setItem("theme", theme);
-      updateLogo(theme);
+      setTheme(themeToggle.checked ? "light" : "dark");
     });
   }
+
+  if (themeToggleDrawer) {
+    themeToggleDrawer.addEventListener("change", () => {
+      setTheme(themeToggleDrawer.checked ? "light" : "dark");
+    });
+  }
+}
+
 
   const overlay = document.querySelector('.overlay');
 if (overlay) {
