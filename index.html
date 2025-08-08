@@ -7,7 +7,7 @@
     <title>Jau Consulting</title>
 
     <!-- ESTILOS -->
-    <link rel="stylesheet" href="/JauConsulting/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- MODO OSCURO POR DEFECTO SEGÚN LOCALSTORAGE -->
     <script>
@@ -20,14 +20,15 @@
   </head>
 
   <body>
+    <!-- HEADER: Se insertará dinámicamente desde header.html -->
+    <div id="header-container"></div>
 
 
 
 
 
-    <!-- HEADER: <div id="header-container"></div> -->
-    
-<div id="header-container"></div>
+
+
 
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -144,7 +145,7 @@
   <p class="brochure-subtitle">
     Obtén más información sobre nuestros servicios y experiencia.
   </p>
-  <a href="/JauConsulting/docs/resume.pdf" class="brochure-button" target="_blank" download>
+  <a href="ruta/del/brochure.pdf" class="brochure-button" target="_blank" download>
     Descargar Brochure
   </a>
 </section>
@@ -185,13 +186,13 @@
     <footer id="footer-placeholder"></footer>
 
     
-    <script src="/JauConsulting/js/script.js"></script>
+    <script src="js/script.js"></script>
     <script>
       const header = document.getElementById("header-placeholder");
       const footer = document.getElementById("footer-placeholder");
 
       if (header) {
-        fetch("/JauConsulting/header.html")
+        fetch("header.html")
           .then(res => res.text())
           .then(data => {
             header.innerHTML = data;
@@ -200,7 +201,7 @@
       }
 
       if (footer) {
-        fetch("/JauConsulting/footer.html")
+        fetch("footer.html")
           .then(res => res.text())
           .then(data => {
             footer.innerHTML = data;
