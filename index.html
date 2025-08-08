@@ -192,7 +192,7 @@
       const footer = document.getElementById("footer-placeholder");
 
       if (header) {
-        fetch("header.html")
+        fetch("/JauConsulting/header.html")
           .then(res => res.text())
           .then(data => {
             header.innerHTML = data;
@@ -201,7 +201,7 @@
       }
 
       if (footer) {
-        fetch("footer.html")
+        fetch("/JauConsulting/footer.html")
           .then(res => res.text())
           .then(data => {
             footer.innerHTML = data;
