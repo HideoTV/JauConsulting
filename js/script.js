@@ -51,7 +51,7 @@ function resaltarLinkActivo() {
 // ✅ Cuando el DOM está listo, cargamos header y footer
 window.addEventListener("DOMContentLoaded", () => {
   // Cargar header dinámico
-  fetch("../header.html")
+  fetch("/JauConsulting/header.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("header-container").innerHTML = data;
@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
   // Cargar footer dinámico
-  fetch("../footer.html")
+  fetch("/JauConsulting/footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-container").innerHTML = data;
