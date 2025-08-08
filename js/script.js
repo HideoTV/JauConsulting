@@ -7,7 +7,7 @@ function inicializarTema() {
 
   // Detectar si estamos en carpeta /pages/
   const pathLevel = window.location.pathname.split("/").filter(Boolean).length;
-  const prefix = pathLevel > 1 ? "/JauConsulting/" : "";
+  const prefix = pathLevel > 1 ? "../" : "";
 
   if (toggle) {
     toggle.checked = document.documentElement.classList.contains("light");
@@ -19,23 +19,15 @@ function inicializarTema() {
       localStorage.setItem("theme", isLight ? "light" : "dark");
 
       if (logo) {
-
-
-
-        logo.src = isLight
-  ? "/JauConsulting/img/LogoJauPNG - Negro.PNG"
-  : "/JauConsulting/img/LogoJauPNG - Blanco.png";
-
-
-
+        logo.src = isLight ? `${prefix}img/LogoJauPNG - Negro.PNG` : `${prefix}img/LogoJauPNG - Blanco.png`;
       }
     });
   }
 
   if (logo) {
     logo.src = document.documentElement.classList.contains("light")
-  ? "/JauConsulting/img/LogoJauPNG - Negro.PNG"
-  : "/JauConsulting/img/LogoJauPNG - Blanco.png";
+      ? `${prefix}img/LogoJauPNG - Negro.PNG`
+      : `${prefix}img/LogoJauPNG - Blanco.png`;
   }
 }
 
@@ -59,7 +51,7 @@ function resaltarLinkActivo() {
 // ✅ Cuando el DOM está listo, cargamos header y footer
 window.addEventListener("DOMContentLoaded", () => {
   // Cargar header dinámico
-  fetch("/JauConsulting/header.html")
+  fetch("../header.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("header-container").innerHTML = data;
@@ -68,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
   // Cargar footer dinámico
-  fetch("/JauConsulting/footer.html")
+  fetch("../footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-container").innerHTML = data;
@@ -123,8 +115,8 @@ function inicializarHeader() {
   if (themeToggle && logoImg) {
     const updateLogo = theme => {
       logoImg.src = theme === "light"
-        ? "/JauConsulting/img/LogoJauPNG - Negro.PNG"
-        : "/JauConsulting/img/LogoJauPNG - Blanco.PNG";
+        ? "../img/LogoJauPNG - Negro.PNG"
+        : "../img/LogoJauPNG - Blanco.PNG";
     };
 
     const savedTheme = localStorage.getItem("theme") || "dark";
