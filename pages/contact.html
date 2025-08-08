@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- 📝 Metadatos y enlaces a hojas de estilo -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Jau Consulting</title>
+
+  <!-- MODO OSCURO POR DEFECTO SEGÚN LOCALSTORAGE -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
+    })();
+  </script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://kit.fontawesome.com/a2e0f6b6a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- 🔼 HEADER dinámico -->
+    <div id="header-container"></div>
+
+
+
+
+
+    
+<main class="page-section">
+    <section class="contact-section">
+    <h2>
+        <span class="section-number">03.</span>
+        <span class="section-title">Contáctanos</span>
+      </h2>
+
+      <p class="contact-description">Ponte en contacto con nosotros para solicitar información o resolver cualquier consulta. Nuestro equipo de asesores está listo para brindarte la orientación adecuada y acompañarte en cada etapa de tu requerimiento.</p>
+
+      <div class="contact-grid">
+        <a href="https://www.linkedin.com/company/jau-consulting/?viewAsMember=true" class="contact-card" target="_blank">
+          <i class="fab fa-linkedin contact-icon"></i>
+          <div>
+            <h3>LinkedIn</h3>
+            <p>@jauconsulting</p>
+          </div>
+        </a>
+        
+
+               <a href="https://wa.me/51965422547?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios."" class="contact-card" target="_blank">
+          <i class="fab fa-telegram contact-icon"></i>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>@jauconsulting</p>
+          </div>
+        </a>
+
+        <a href="mailto:recepcion@jauconsulting.com" class="contact-card">
+          <i class="fas fa-envelope contact-icon"></i>
+          <div>
+            <h3>Email</h3>
+            <p>recepcion@jauconsulting.com</p>
+          </div>
+        </a>
+
+ <a href="https://github.com/hideotv" class="contact-card" target="_blank">
+          <i class="fab fa-github contact-icon"></i>
+          <div>
+            <h3>GitHub</h3>
+            <p>@jauconsulting</p>
+          </div>
+        </a>
+
+
+
+
+      </div>
+    </section>
+  </main>
+
+
+
+  
+  <!-- 🔽 FOOTER dinámico -->
+  <div id="footer-container"></div>
+
+  <!-- 📦 Script general que carga dinámicamente header/footer y lógica -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

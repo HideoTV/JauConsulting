@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- 📝 Metadatos básicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros | Jau Consulting</title>
+
+  <!-- 🌓 Aplica tema guardado en localStorage antes de que cargue el DOM -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
+    })();
+  </script>
+
+  <!-- 🎨 Estilos principales -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://kit.fontawesome.com/a2e0f6b6a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- 🔼 HEADER: se cargará dinámicamente en este contenedor -->
+  <div id="header-container"></div>
+
+
+
+
+
+
+  <!-- 👤 CONTENIDO PRINCIPAL -->
+  <main class="about-section">
+
+    <section class="about-content">
+<h2>
+  <span class="section-number">01.</span>
+  <span class="section-title">¿Quiénes somos?</span>
+</h2>
+
+      <p>
+      Somos una empresa peruana líder en consultoría de 
+      <span class="highlight">ingeniería</span>, 
+      <span class="highlight">supervisión de obras</span> y 
+      <span class="highlight">ejecución de proyectos</span>. Nuestro compromiso es brindar soluciones integrales y de alta calidad que aseguren el éxito en cada etapa del proyecto. Contamos con un equipo de profesionales altamente calificados y con amplia experiencia en la gestión de proyectos de diversa índole y complejidad.
+    </p>
+
+      <p>Nos especializamos en los sectores de 
+        <span class="highlight">minería</span>, 
+        <span class="highlight">generación</span>, 
+        <span class="highlight">transmisión</span>, y 
+        <span class="highlight">distribución de energía</span>. Ofrecemos servicios personalizados, adaptados a las necesidades específicas de cada cliente, brindando asesoría técnica especializada y supervisión constante para garantizar el cumplimiento de los plazos y presupuestos establecidos.
+      </p>
+
+     
+      <p>Nuestros pilares como empresa se basan en los siguientes valores:</p>
+
+      <ul class="tech-list">
+        <li>Compromiso con la excelencia</li>
+        <li>Relaciones de confianza</li>
+        <li>Enfoque en resultados</li>
+        <li>Flexibilidad y adaptabilidad</li>
+        <li>Responsabilidad social y ambiental</li>
+        <li>Especialización técnica</li>
+      </ul>
+    </section>
+
+
+
+
+
+    <!-- 📸 FOTO DE PERFIL -->
+    <div class="about-image">
+      <img src="../img/Perfil Foto 1.png" alt="Brittany" />
+    </div>
+
+
+  </main>
+
+
+<section class="get-in-touch">
+  <p class="section-number">¿Qué sigue?</p>
+  <h2 class="contact-heading">Contáctanos</h2>
+  <p class="contact-description">
+    Si tienes alguna consulta, proyecto en mente o deseas coordinar una reunión, no dudes en escribirnos. Nuestro equipo está siempre disponible para atenderte con la mejor disposición.
+  </p>
+  <a href="mailto:contacto@jauconsulting.com" class="btn-secondary">Escríbenos</a>
+</section>
+
+
+
+
+
+
+
+
+  <!-- 🔽 FOOTER: se cargará dinámicamente en este contenedor -->
+  <div id="footer-container"></div>
+
+  <!-- 📦 Script general -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

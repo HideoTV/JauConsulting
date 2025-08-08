@@ -1,0 +1,1739 @@
+/* 🎨 PALETA DE COLORES PERSONALIZADA */
+/* 🌐 VARIABLES PARA TEMAS APLICABLES A TODO EL SITIO */
+:root {
+  /* 🎨 Colores base */
+  --primary: #01FFE3;
+  --secondary: #E6FFFC;
+
+  /* 🌙 Modo Oscuro */
+  --bg-dark: #141010;
+  --card-dark: #111827;
+  --text-dark: #ccd6f6;
+  --text-muted-dark: #a0aec0;
+  --border-dark: rgba(255, 255, 255, 0.1);
+
+  /* ☀️ Modo Claro */
+  --bg-light: #ffffff;
+  --card-light: #ffffff;
+  --text-light: #0a192f;
+  --text-muted-light: #4a5568;
+  --border-light: rgba(0, 0, 0, 0.08);
+
+  /* ✅ Variables activas según el tema */
+  --bg: var(--bg-dark);
+  --card: var(--card-dark);
+  --text: var(--text-dark);
+  --text-muted: var(--text-muted-dark);
+  --border: var(--border-dark);
+}
+
+/* 🌗 Si el HTML tiene clase .light, cambiamos a modo claro */
+
+
+.page-section {
+  padding: 150px 20px 60px;
+  max-width: 950px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* 🚫 Evitar barra horizontal y asegurar diseño responsivo */
+html, body {
+  overflow-x: hidden;  /* ✅ Oculta desbordamiento horizontal */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+/* Puedes usar var(--bg) y var(--text) en cualquier nuevo componente que agregues */
+
+
+
+/* 🧍 ESTILOS GENERALES */
+
+/* 💻 Aplicación general para todo el sitio */
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+/* 🌈 Texto resaltado con enlaces o conceptos clave */
+.highlight {
+  color: var(--primary);
+  font-weight: 400;
+}
+
+/* 🌈 TEXTOS DESTACADOS */
+.light .highlight {
+  color: var(--primary);
+  font-weight: 550;
+}
+
+
+
+/* ----------------- GENERAL MODO CLARO -----------------------------*/
+
+/* ☀️ MODO CLARO: sobrescribe las variables */
+
+:root.light {
+  --bg: #ffffff;
+  --card: #FF011F; /* no se usa */
+  --text: #101A18; /* Titulos y textoo */
+  --text-muted: #959797; /* Titulos y textoo #4a5568 */
+  --border: rgba(0, 0, 0, 0.08);
+  --primary: #4FE5CE; /* 💠 Reemplazado por un turquesa más nítido */
+  --cta-boton-bg: rgba(79, 229, 206, 0.05);
+  --cta-boton-hover: rgba(79, 229, 206, 0.1);
+}
+
+/* 🎨 Variables activas */
+html.light {
+  --bg: var(--bg-light);
+  --card: var(--card-light);
+  --text: var(--text-light);
+  --text-muted: var(--text-muted-light);
+  --border: var(--border-light);
+  --primary: #4FE5CE;
+}
+
+/* 🌞 FONDO GENERAL */
+.light body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Numeros de header */
+.light .nav-pages a span.section-number {
+  color: var(--primary);
+  text-shadow: 0 0 2px rgba(0, 119, 204, 0.3);
+}
+
+
+/* ✨ BOTONES LEER MAS */
+
+.light .hero .cta {
+  background-color: var(--cta-boton-bg);
+
+}
+
+.light .hero .cta:hover {
+  background-color: var(--cta-boton-hover);
+
+}
+
+
+
+/* ✨ BOTONES Y CTA */
+.light .cta,
+.light .resume-btn,
+.light .brochure-button {
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  background: var(--cta-boton-bg); /* transparent boton brochure*/
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.light .cta:hover,
+.light .resume-btn:hover,
+.light .brochure-button:hover {
+  background-color: var(--cta-boton-hover);  /* más opaco, agradable */
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 🧩 TARJETAS DE SERVICIOS */
+.light .grid-card {
+  background-color: #ffffff; /* 🔧 Esta línea controla el fondo */
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light .grid-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* 🎯 ICONOS DE LAS TARJETAS */
+.light .grid-card .card-icon {
+  color: var(--primary);
+  font-size: 1.5rem;
+  filter: brightness(1);
+}
+
+
+/* 🖼️ TARJETAS CON LOGO */
+.light .logo-card {
+  background-color: #f9fafa;
+  border: 1px solid var(--border);
+}
+
+.light .logo-card:hover {
+  background-color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* 📄 BOTÓN BROCHURE */
+.light .brochure-button {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.light .brochure-button:hover {
+  background-color: var(--cta-boton-hover);
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+}
+
+/* 🔢 Números del menú */
+.light .nav-pages a span.section-number {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); /* sutil en claro */
+}
+
+/* 🧭 NAV / HEADER */
+.light .resume-btn {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.light .resume-btn:hover {
+  background-color: var(--cta-boton-hover);
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+}
+
+.light .site-header {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Hedar linea debajo */
+  background-color: var(--bg);
+}
+
+
+
+
+/* -----------------HEADER------------------------------*/
+
+header #logo-img {
+  position: relative;
+  z-index: 1001; /* logo visible siempre */
+}
+
+.site-header {
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-img {
+  height: 45px;
+}
+
+
+.nav-links a.active-link,
+.sidebar-links a.active-link {
+  color: var(--primary);         /* cambia color del texto */
+  font-weight: bold;             /* más grueso */
+  border-bottom: 0px solid var(--primary); /* línea debajo opcional */
+}
+
+
+/* 📦 CONTENEDOR CENTRAL DEL NAV (CENTRADO) */
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.nav-pages {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* espacioado del header */
+}
+
+
+.nav-pages a {
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--text);
+  transition: color 0.3s ease;
+  font-size: 0.7rem; /* tamaño de letra del header */
+}
+
+.nav-pages a:hover {
+  color: var(--primary);
+}
+
+.resume-btn {
+    font-size: 0.95rem;/* 🔧 AQUÍ puedes cambiar el tamaño */
+  padding: 8px 14px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1;
+  transform: translateY(-10px);/* movimiento eje Y de boton REsumen */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0rem;  /* Espaciado link de navegacion y de boton Resumen */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+
+/* Estilo general tipo botón del index */
+.cta.resume-btn {
+  display: inline-flex;  /* ✅ necesario para centrar */
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1;
+  height: 32px;
+}
+
+
+/* Hover igual al del botón ¡Leer más! */
+.cta.resume-btn:hover {
+  background-color: rgba(0, 255, 227, 0.1);
+  box-shadow: 0 0 6px rgba(0, 255, 227, 0.4);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+.nav-links .switch {
+  align-self: 1.5rem; /* asegura que también el switch se alinee */
+}
+
+/* boton Resume */
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* solo entre resumen y el switch */
+  margin-left: 2rem; /* separa este grupo del resto del menú */
+}
+
+
+
+
+/* 🌙 Switch dentro del header */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* ✅ Activado (modo claro) */
+.switch input:checked + .slider {
+  background-color: #999;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(18px);
+  background-color: white;
+}
+
+.switch input:checked + .slider {
+  background-color: #999;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(18px);
+  background-color: white;
+}
+
+
+
+/* ⚪ Fondo del switch */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* ⚫ Botón dentro del switch */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: black;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+
+
+/* --------------------FIN HEADER ------------------ */
+
+
+
+
+/*------------------------------------ ESTILO MENU HAMBURGUESA ------------------------------*/
+
+
+
+/* 🌐 Botón de menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-color, #000);
+  cursor: pointer;
+}
+
+/* 🌐 Sidebar oculto por defecto */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--bg);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 💡 Centra horizontalmente */
+  justify-content: center; /* 💡 Centra verticalmente */
+  gap: 1.5rem;
+  text-align: center;
+}
+
+
+
+
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 100%;
+  text-align: center;
+}
+
+.sidebar-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+  gap: 0.3rem;
+}
+
+.sidebar-links a:hover {
+  color: var(--primary);
+}
+
+.sidebar-links .section-number {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.sidebar-links .sidebar-label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .sidebar {
+    display: none !important; /* oculta sidebar en pantallas grandes */
+  }
+}
+
+
+/* 🌐 Sidebar activo */
+.sidebar.active {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* 🌐 Botón cerrar sidebar */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text); /* Cambiado */
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+
+
+
+
+/* 🌐 Mostrar botón hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+.menu-toggle {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text); /* Cambiado */
+  cursor: pointer;
+  
+}
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Overlay inicial oculto */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* fondo oscuro */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900; /* debajo del sidebar (1000) pero sobre el contenido */
+}
+
+.sidebar.active ~ .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.sidebar-links .resume-btn {
+  padding: 6px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-links .resume-btn:hover {
+  background-color: rgba(0, 255, 227, 0.1);
+  box-shadow: 0 0 6px rgba(0, 255, 227, 0.4);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+/*------------------------------------ FIN HAMBURGUESA ------------------------------*/
+
+
+
+
+/* 📦 CONTENIDO GENERAL */
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px; /* evita que el header tape el contenido */
+}
+
+.main-container {
+  width: 100%;
+  max-width: 950px; /* 👈 AQUÍ controlas el ANCHO del contenido */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+
+
+/* 🦶 PIE DE PÁGINA */
+.site-footer {
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-stats {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+
+
+
+/*------------------------------------ estilo index ------------------------------*/
+
+/* 💬 SECCIÓN PRINCIPAL DE PRESENTACIÓN */
+.hero {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0rem;
+  
+}
+
+/* 💬 SECCIÓN PRINCIPAL DE PRESENTACIÓN */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero a {
+  align-self: flex-start;
+}
+
+.hero h1 {
+  font-size: 1rem; /* tamaño de Bienvenido */
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0rem;
+}
+
+
+
+
+/* 🅰️ TÍTULO PRINCIPAL (pantallas grandes por defecto) */
+.hero .big-heading {
+    font-size: clamp(2rem, 5.5vw, 4rem);
+  margin-bottom: 0rem;
+}
+
+.hero .medium-heading {
+   font-size: clamp(1.5rem, 5vw, 4rem);  /* AREAS DE NEGOCIO Y SERVICIOS */
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+
+
+.big-heading {
+  font-size: 400rem;
+  margin: 10px 0;
+   margin-bottom: 0rem;
+}
+
+/* 🅱️ SUBTÍTULO */
+
+.medium-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.hero p {
+  max-width: 540px;
+  font-size: 1rem; /* Texto en general */
+  line-height: 1.6;
+  color: var(--text);
+}
+
+
+/* ✅ BOTÓN PRINCIPAL (CTA) */
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: #000;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+
+.cta {
+  background-color: var(--card);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  margin-bottom: 1.5rem;
+}
+
+
+
+.cta:hover {
+  background-color: #01ffe3;
+}
+
+.hero .cta {
+  margin-top: 2rem;
+  padding: 12px 28px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 6px;
+  text-decoration: none;
+ font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: all 0.3s ease; /* para animar tamaño y color */
+  display: inline-block;
+}
+
+.hero .cta:hover {
+  padding: 14px 36px; /* 👈 se expande horizontalmente */
+  background-color: rgba(0, 255, 227, 0.15); /* 👈 fondo translúcido */
+  box-shadow: 0 0 6px rgba(0, 255, 227, 0.4); /* 👈 glow suave */
+  transform: translateY(-2px); /* 👈 levanta un poco el botón */
+}
+
+
+/*------------------------------------ ESTILO CLIENTES ------------------------------*/
+
+.clientes-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.clientes-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.clientes-subtitle {
+  max-width: 950px;
+  margin: 0 auto 60px auto;
+  font-size: 1rem; /* Tamaño de texto EN jau COnsulting */
+  line-height: 1.7;
+  color: var(--text, #a0aec0);
+}
+
+.clientes-grid {
+  display: grid;
+  /* se adaptará, mínimo 150px por columna, máximo ocupa el espacio disponible */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  row-gap: 30px;
+  column-gap: 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+
+/* TAMAÑO IMÁGENES */
+.clientes-grid img {
+  max-height: 150px; /* antes 220px */
+  max-width: 200px;  /* ajusta a gusto */
+   margin: 0; 
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.clientes-grid img:hover {
+  transform: scale(1.08);
+  filter: none;
+}
+
+
+
+
+
+/* CARD PARA CADA LOGO */
+.logo-card {
+ 
+  border-radius: 12px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 160px; /* altura consistente */
+  transition: all 0.3s ease;
+   border: 2px solid transparent; /* borde invisible base */
+  
+}
+
+.logo-card img {
+  max-height: 160px; /* imágenes más grandes */
+  max-width: 160px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER EFECTO */
+.logo-card:hover {
+  background-color: #ffffff; /* fondo blanco al pasar cursor */
+  transform: translateY(-3px);
+   border: 2px solid #00e0ff; /* borde resaltado al hover */
+}
+
+
+.logo-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* MODO CLARO */
+html.light .logo-card {
+  background-color: #ffffff; /* fondo gris claro para logos */
+}
+
+html.dark .logo-card {
+  background-color: #ffffff; /* fondo blanco en modo oscuro */
+}
+
+
+html.light .clientes-grid img {
+  /* en modo claro a colores */
+  filter: none;
+}
+
+
+/* BROCHURE */
+/* ---------------- BROCHURE ---------------- */
+.brochure-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--bg, #f8f8f8);
+  border-top: 1px solid rgba(0,0,0,0.05);
+ 
+}
+
+.brochure-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.brochure-subtitle {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text, #555);
+}
+
+/* 🎨 Botón */
+.brochure-button {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00cdb0;
+  background-color: transparent;
+  border: 2px solid #00cdb0;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover con efecto elegante */
+.brochure-button:hover {
+  padding: 14px 40px; /* 👈 se expande ligeramente en ancho */
+  background-color: rgba(0, 205, 176, 0.15); /* 👈 fondo con transparencia */
+  color: #00cdb0;
+  box-shadow: 0 0 6px rgba(0, 205, 176, 0.4); /* opcional para dar brillo */
+  transform: translateY(-2px);
+}
+
+/* 🌙 MODO OSCURO */
+html.dark .brochure-button {
+  color: #00cdb0;
+  border-color: #00cdb0;
+  background-color: transparent;
+}
+
+html.dark .brochure-button:hover {
+  padding: 14px 40px;
+  background-color: rgba(0, 205, 176, 0.15);
+  color: #00cdb0;
+  box-shadow: 0 0 6px rgba(0, 205, 176, 0.4);
+  transform: translateY(-2px);
+}
+
+
+
+/*------------------------------------ INDEX: SERVICIOS ESPECIALIZADOS ------------------------------*/
+
+.services-grid-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-grid-section .section-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--text);
+}
+
+
+
+
+/*------------------------------------ PAGINA ABOUT ------------------------------*/
+
+
+/* 📬 SECCIÓN DE CONTACTO FINAL */
+.get-in-touch {
+  padding: 100px 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.get-in-touch .section-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: -1rem;
+}
+
+.get-in-touch .contact-heading {
+  font-size: clamp(2.5rem, 5vw, 2.5rem); /* tamaño de letra de contactanos */
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.get-in-touch .contact-description {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  margin-bottom: 5rem;
+}
+
+
+
+
+
+/* 📄 Contenedor general de la sección About */
+.about-section {
+  display: flex;
+    flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+padding: 150px 20px 60px;   /* 👈 altura estándar igual que en index */
+  color: var(--text);
+  max-width: 950px;           /* 👈 mismo ancho que en index */
+  margin: 0 auto;
+}
+
+/* 📄 Contenido textual de la sección */
+.about-content {
+  flex: 1 1 60%;
+  padding-top: 10px;
+  padding-right: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .about-content {
+    padding-top: 0px;
+  }
+
+  .about-content h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.0rem;
+  }
+
+  .about-content p {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+/* 🔢 Número + título alineado horizontalmente con línea */
+.about-content h2 {
+   display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* 🔧 Aquienes somos */
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+    text-align: left; /* 👈 fuerza alineación a la izquierda */
+}
+
+
+/* 🔢 Número de sección (01.) */
+.about-content .section-number {
+  color: var(--primary); /* ✅ Usa el color principal personalizado */
+  font-weight: bold;
+   font-size: clamp(1.8rem, 4vw, 2.5rem); 
+  margin-right: 0.5rem;
+}
+
+/* 🟦 Título de la sección (About Me) */
+.about-content .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  align-items: left;
+  color: var(--text); /* ✅ Dinámico según el modo */
+  padding-bottom: 0rem;
+}
+
+/* ✏️ Párrafos dentro de about */
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--text); /* ✅ Para garantizar legibilidad con fondo dinámico */
+  text-align: left;
+}
+
+
+
+/* 🔧 Lista de tecnologías */
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+/* 🔷 Icono al inicio de cada ítem en la tech-list */
+.tech-list li::before {
+  content: "▸";
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+/* 🖼️ Contenedor de la imagen */
+.about-image {
+  flex: 1 1 35%;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* 🧑 Imagen de perfil */
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  border: 2px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    padding-right: 0;
+    text-align: justify;
+  }
+
+  .about-image {
+    padding-top: 2rem;
+    
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 250px;
+  }
+}
+
+
+
+
+/*------------------------------------ FIN ABOUT ------------------------------*/
+
+
+/*------------------------------------ PAGINA EXPERIENCE ------------------------------*/
+
+/* 🧱 Contenedor principal */
+
+/* 🔢 Número de sección (01.) */
+.experience-section .section-number {
+  color: var(--primary); /* ✅ Usa el color principal personalizado */
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* 🟦 Título de la sección (About Me) */
+.experience-section .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  align-items: left;
+  color: var(--text); /* ✅ Dinámico según el modo */
+  padding-bottom: 0rem;
+}
+
+.experience-section h2 {
+   display: inline-flex; /* 👈 usa esto */
+   align-items: baseline;
+   gap: 0.5rem; /* espacio entre número y texto */
+   font-size: clamp(1.8rem, 4vw, 2.4rem);
+   font-weight: bold;
+   color: var(--text);
+   border-bottom: 0px solid var(--border);
+}
+
+
+/* 📦 CONTENEDOR PRINCIPAL DE SERVICIOS */
+.experience-section {
+  display: flex;
+  flex-direction: column; /* título encima y luego contenido */
+  max-width: 950px;  
+  margin: 0 auto;
+  color: var(--text);
+  margin-bottom: 2rem; /* Clientes satisfechos y seccion numero */
+}
+
+.experience-section > p {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: var(--text);
+  line-height: 1.5;          /* 👈 ESTE es el interlineado actual */
+  font-size: 1rem;
+   max-width: 950px;
+}
+
+.section-number {
+  color: var(--primary);
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* 📑 Layout de experiencia */
+.experience-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 🗂️ Tabs de trabajos */
+.job-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  border-left: 2px solid #8892b0;
+}
+
+.job-tabs .tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #8892b0;
+font-family: 'Inter', sans-serif;
+  border-left: 2px solid transparent;
+  transition: background 0.2s ease;
+}
+
+.job-tabs .tab:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.job-tabs .tab.active {
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left: 2px solid var(--primary);
+}
+
+/* 📋 Contenido de cada tab */
+.tab-content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.tab-content h3 {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.tab-content .job-date {
+  font-size: 0.9rem;
+  color: #8892b0;
+  margin-bottom: 1rem;
+}
+
+.tab-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-content li::before {
+  content: "▸";
+  color: var(--primary);
+  display: inline-block;
+  margin-right: 0.5rem;
+  line-height: 1.7; /* o 1.6 si prefieres más compacto */
+}
+/*------------------------------------ FIN Aexperiencia ------------------------------*/
+
+
+
+
+
+
+/*------------------------------------ PAGINA WORK (OPTIMIZADO FINAL) ------------------------------*/
+
+
+/* 🧱 Sección principal */
+.work-section {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+/* 🔰 Título de sección */
+.section-title {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-number {
+  color: var(--primary);
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* ⭐ Proyectos Destacados */
+.featured-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* 🔁 Tarjetas de proyectos destacados */
+.project-card {
+  display: flex;
+  flex-direction: row; /* valor por defecto */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 🔁 Invertir orden para alternar imagen a la derecha */
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 🖼 Imagen */
+.project-image {
+  flex: 1 1 48%;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* 📄 Info */
+.project-info {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featured-label {
+  color: var(--primary);
+ font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+
+.project-title {
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-description {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-description a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.project-stack {
+font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: var(--text);
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: var(--primary);
+}
+
+/* 🗂 Otros proyectos */
+.noteworthy-projects {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.archive-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/* 🧱 Grid de tarjetas */
+.grid-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+/* 📦 Tarjeta individual */
+.grid-card {
+  background-color: rgba(255, 255, 255, 0.1); /* 🔧 Esta línea controla el fondo */
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 📁 Ícono de carpeta */
+.card-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* 🔗 Iconos de GitHub y externo */
+.project-icons {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.project-icons a {
+  color: var(--text);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.project-icons a:hover {
+  color: var(--primary);
+}
+
+/* 📝 Contenido */
+.grid-card h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem; /*titulo de tarjetas INDEX*/
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.grid-card p {
+  font-size: 0.8rem; /*descripciono de tarjetas INDEX*/
+  color: var(--text);
+  opacity: 0.85;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.grid-card .stack {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* 🔘 Botón Show More */
+.show-more {
+  margin-top: 30px;
+}
+
+.btn-show-more {
+  padding: 10px 20px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-show-more:hover {
+  background-color: rgba(0, 230, 194, 0.1);
+}
+
+
+
+
+/*------------------------------------ paginaSERVICIOS ------------------------------*/
+/* 🛠 SECCIÓN SERVICIOS */
+.services {
+  background-color: var(--card);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 💡 SECCIÓN POR QUÉ ELEGIRNOS */
+.why-us {
+  padding: 80px 20px;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.why-us ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-us li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+
+.btn-secondary {
+  padding: 12px 24px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: var(--cta-boton-bg);
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--cta-boton-hover);  /* más opaco, agradable */
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+  transform: translateY(-2px);
+  padding: 14px 36px; /* se expande un poco al pasar el mouse */
+}
+
+
+
+
+
+/*------------------------------------ PAGINA CONTACTO ------------------------------*/
+
+
+/* 🔢 Número de sección */
+.contact-section .section-number {
+  color: var(--primary); /* Usa el color principal personalizado */
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* 🟦 Título de la sección */
+.contact-section .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text); /* Dinámico según el modo */
+  
+
+}
+
+/* Encabezado h2 de la sección */
+.contact-section h2 {
+  display: inline-flex; /* número y título en la misma línea */
+  align-items: baseline;
+  gap: 0.5rem; /* espacio entre número y texto */
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: bold;
+  color: var(--text);
+  text-align: left;
+  
+}
+
+/* Contenedor principal */
+.contact-section {
+  display: flex;
+  flex-direction: column; /* título encima y luego contenido */
+  margin: 0 auto 2rem;
+  color: var(--text);
+  
+}
+
+
+.contact-description {
+ margin-bottom: 5rem; /* espacio entre texto y tarjetas */
+  max-width: 950px;    /* igual que el resto del sitio */
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+
+/* Grid de tarjetas */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.1); /* 🔧 Esta línea controla el fondo */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  
+  border: 1px solid var(--border); /* ✅ Agrega esta línea */
+  border-radius: 10px;             /* 🔄 Redondeado opcional */
+  transition: all 0.3s ease;
+  
+}
+
+.contact-card:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+}
+
+/* Icono dentro de la tarjeta */
+.contact-icon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* Subtítulo / descripción */
+.contact-section p.contact-subtitle {
+  max-width: 950px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  
+  
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+  /* Fuerza 2 columnas en pantallas medianas */
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  /* Fuerza 1 columna en pantallas pequeñas */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    flex-direction: column; /* icono arriba, texto abajo */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .contact-card div {
+    text-align: center;
+  }
+
+  .contact-section p.contact-subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+    
+  }
+}
+
+/*------------------------------------ FINCONTACTO ------------------------------*/

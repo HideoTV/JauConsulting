@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- 📝 Metadatos básicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiencia | Jau Consulting</title>
+
+  <!-- 🌓 Aplica tema guardado en localStorage antes de que cargue el DOM -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
+    })();
+  </script>
+
+  <!-- 🎨 Estilos principales -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://kit.fontawesome.com/a2e0f6b6a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- 🔼 HEADER dinámico -->
+  <div id="header-container"></div>
+
+
+
+
+
+
+<!-- 👤 CONTENIDO PRINCIPAL -->
+
+  <main class="page-section experience-section">
+    <section class="experience-section">
+    <h2>
+        <span class="section-number">02.</span>
+        <span class="section-title">Nuestros Servicios</span>
+      </h2>
+    <p>
+  Brindamos servicios integrales que abarcan todas las etapas de los proyectos de generación y transmisión de energía. 
+  Nuestro compromiso es ofrecer soluciones técnicas sólidas y de alto estándar de calidad que garanticen el éxito de cada iniciativa. 
+  Nuestros servicios incluyen <span class="highlight">análisis de factibilidad</span>, <span class="highlight">ingeniería</span>, 
+  <span class="highlight">instalación</span>, <span class="highlight">supervisión de estudios y obras</span>, así como 
+  <span class="highlight">gerencia integral de proyectos de ingeniería y construcción</span>. 
+  Trabajamos con un enfoque estratégico y un equipo altamente especializado, asegurando resultados eficientes y sostenibles para nuestros clientes.
+</p>
+
+
+
+
+
+    <div class="experience-container">
+      <ul class="job-tabs">
+        <li class="tab active" data-target="consultoria">Consultoría y Diseño</li>
+        <li class="tab" data-target="estudios">Estudios Eléctricos</li>
+        <li class="tab" data-target="gestion">Gestión de Proyectos</li>
+        <li class="tab" data-target="permisologia">Permisología</li>
+      </ul>
+
+
+    <div class="tab-content" id="consultoria">
+      <h3>Servicios de <span class="highlight">Consultoría y Diseño</span></h3>
+      <ul>
+        <li>Ingeniería conceptual</li>
+        <li>Ingeniería a nivel de prefactibilidad</li>
+        <li>Ingeniería a nivel de factibilidad</li>
+        <li>Ingeniería a nivel de definitivo</li>
+        <li>Repotenciación y modernización de infraestructura</li>
+        <li>Geología y geotecnia</li>
+        <li>Topografía especializada</li>
+      </ul>
+    </div>
+
+
+          <div class="tab-content" id="estudios" style="display:none">
+            <h3>Servicios de <span class="highlight">Estudios Eléctricos</span></h3>
+            <ul>
+              <li>Estudios de pre‑operatividad</li>
+              <li>Coordinación de aislamiento</li>
+              <li>Coordinación de protecciones eléctricas</li>
+              <li>Estudios de operatividad</li>
+              <li>Medición y análisis de armónicos</li>
+            </ul>
+          </div>
+
+
+      <div class="tab-content" id="gestion" style="display:none">
+        <h3>Servicios de <span class="highlight">Gestión de Proyectos</span></h3>
+        <ul>
+          <li>Elaboración y revisión de propuestas EPC</li>
+          <li>Dirección y gerenciamiento de proyectos EPC</li>
+          <li>Supervisión técnica integral</li>
+          <li>Análisis de riesgos y planes de mitigación</li>
+          <li>Control de cronogramas y entregables</li>
+          <li>Gestión y control de costos</li>
+        </ul>
+      </div>
+
+
+      <div class="tab-content" id="permisologia" style="display:none">
+        <h3>Servicios de <span class="highlight">Permisología</span></h3>
+        <ul>
+          <li>Gestión integral de servidumbres</li>
+          <li>Gestión arqueológica ante autoridades competentes</li>
+          <li>Concesiones temporales y definitivas</li>
+          <li>Gestión de instrumentos ambientales</li>
+          <li>Tramitación de licencias municipales</li>
+          <li>Gestión de uso de aguas marinas ante la DICAPI</li>
+        </ul>
+      </div>
+
+
+    </div>
+    </section>
+
+
+  <section class="clientes-section">
+  <h2 class="clientes-title">Clientes satisfechos</h2>
+  <p class="clientes-subtitle">
+    En Jau Consulting, empresas grandes, medianas y pequeñas han depositado su confianza en nosotros gracias a la calidad de nuestros servicios. Brindamos una solución integral que abarca todas las fases del proyecto: análisis de factibilidad, ingeniería, instalación, montaje y puesta en marcha, operación y mantenimiento, hasta la entrega final con el comisionamiento de la instalación.
+  </p>
+
+<div class="clientes-grid">
+  <a href="https://www.applus.com/pe/es" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Applus_SinFondo.png" alt="Applus">
+  </a>
+  <a href="https://atlantica.com/sustainability/environmental-policy" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Atlantica_SinFondo.png" alt="Atlantica">
+  </a>
+  <a href="https://www.pluz.pe" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Enel_SinFondo.png" alt="Enel">
+  </a>
+  <a href="https://glexcorporation.com" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Glexco_SinFondo.png" alt="Glexco">
+  </a>
+  <a href="https://peru.isaenergia.com/sitepages/app/home.aspx" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Isa_SinFondo.png" alt="Isa">
+  </a>
+ <a href="https://www.kolpa.com.pe" class="logo-card" target="_blank">
+  <img src="../img/Clientes/Kolpa_SinFondo.png" alt="Kolpa">
+</a>
+
+  </a>
+  <a href="http://www.sangaban.com.pe/index.aspx?seccion=8201" class="logo-card" target="_blank">
+    <img src="../img/Clientes/SanGaban_SinFondo.png" alt="San Gabán">
+  </a>
+  <a href="https://sedemi.com" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Sedemi_SinFondo.png" alt="Sedemi">
+  </a>
+  <a href="https://www.sedime.fr"/ class="logo-card" target="_blank">
+    <img src="../img/Clientes/SEDIME_SinFondo.png" alt="Sedime">
+  </a>
+  <a href="https://www.linkedin.com/company/zafranal/?originalSubdomain=pe" class="logo-card" target="_blank">
+    <img src="../img/Clientes/Zafranal_SinFondo.png" alt="Zafranal">
+  </a>
+</div>
+</section>
+
+
+
+
+  </main>
+
+  <!-- 🔽 FOOTER dinámico -->
+  <div id="footer-container"></div>
+
+  <!-- 📦 Script general que carga dinámicamente header/footer y lógica -->
+  <script src="../js/script.js"></script>
+  <!-- 📌 Script específico para tabs de experiencia -->
+  <script src="../js/experience.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- 🧠 Metadatos y estilos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | Jau Consulting</title>
+
+  <!-- 🌓 Aplica tema guardado al cargar la página -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
+    })();
+  </script>
+
+  <!-- 🎨 Estilos -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+  <script src="https://kit.fontawesome.com/a2e0f6b6a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- 🔼 HEADER dinámico -->
+  <div id="header-container"></div>
+
+  <!-- 💼 CONTENIDO PRINCIPAL -->
+  <main class="work-section">
+    <h2 class="section-title"><span class="section-number">03.</span> Some Things I’ve Built</h2>
+
+    <!-- ⭐ Proyectos destacados -->
+    <section class="featured-projects">
+      <!-- Proyecto 1 -->
+      <div class="project-card">
+        <div class="project-image image-left">
+          <img src="../img/Perfil Foto 2.png" alt="Halcyon" />
+        </div>
+        <div class="project-info">
+          <p class="featured-label">Featured Project</p>
+          <h3 class="project-title">Halcyon Theme</h3>
+          <p class="project-description">
+            A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
+            Available on <a href="#">Visual Studio Marketplace</a>,
+            <a href="#">Package Control</a>, <a href="#">Atom Package Manager</a> and
+            <a href="#">npm</a>.
+          </p>
+          <p class="project-stack">VS Code &nbsp; Sublime Text &nbsp; Atom &nbsp; iTerm2 &nbsp; Hyper</p>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="project-card reverse">
+        <div class="project-info">
+          <p class="featured-label">Featured Project</p>
+          <h3 class="project-title">Spotify Profile</h3>
+          <p class="project-description">
+            A web app for visualizing personalized Spotify data. View your top artists, top tracks,
+            recently played tracks, and detailed audio information about each track.
+          </p>
+          <p class="project-stack">React &nbsp; Styled Components &nbsp; Express &nbsp; Spotify API &nbsp; Heroku</p>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-image image-right">
+          <img src="../img/Perfil Foto 2.png" alt="Spotify Profile" />
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="project-card">
+        <div class="project-image image-left">
+          <img src="../img/Perfil Foto 2.png" alt="Spotify App" />
+        </div>
+        <div class="project-info">
+          <p class="featured-label">Featured Project</p>
+          <h3 class="project-title">Build a Spotify Connected App</h3>
+          <p class="project-description">
+            Unlike tutorials that only cover a few concepts and leave you with half-baked examples,
+            this course teaches the full OAuth flow and REST API usage in a React app.
+          </p>
+          <p class="project-stack">React &nbsp; Node.js &nbsp; Spotify API</p>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📚 Otros proyectos -->
+    <section class="noteworthy-projects">
+      <h3 class="section-subtitle">Other Noteworthy Projects</h3>
+      <a href="#" class="archive-link">view the archive</a>
+
+      <div class="grid-projects">
+        <!-- Tarjetas con íconos -->
+        <div class="grid-card">
+          <div class="card-icon"><i class="fas fa-folder"></i></div>
+          <div class="project-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <h4>Integrating Algolia Search with WordPress Multisite</h4>
+          <p>Building a custom multisite compatible WordPress plugin to build global search with Algolia</p>
+          <p class="stack">Algolia &nbsp; WordPress &nbsp; PHP</p>
+        </div>
+
+        <!-- (Agrega aquí más tarjetas como necesites) -->
+      </div>
+
+      <!-- 🔘 Botón -->
+      <div class="show-more">
+        <button class="btn-show-more">Show More</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔽 FOOTER dinámico -->
+  <div id="footer-container"></div>
+
+  <!-- 📦 Script general que carga dinámicamente header/footer y lógica -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

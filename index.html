@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- METADATOS BÁSICOS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jau Consulting</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- MODO OSCURO POR DEFECTO SEGÚN LOCALSTORAGE -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
+      })();
+    </script>
+
+  </head>
+
+  <body>
+    <!-- HEADER: Se insertará dinámicamente desde header.html -->
+    <div id="header-container"></div>
+
+
+
+
+
+
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+<!-- CONTENIDO PRINCIPAL -->
+
+<main>
+  <div class="main-container">
+    <section class="hero">
+      <h1>Bienvenido</h1>
+      <h2 class="big-heading">Jau Consulting</h2>
+      <h3 class="medium-heading">Áreas de negocios y servicios</h3>
+      <p>
+        Nuestros servicios abarcan
+        <span class="highlight">todas las fases del proyecto:</span>
+        Análisis de factibilidad, ingeniería, instalación, montaje y puesta en marcha; operación, y mantenimiento, terminando el ciclo con el de comisionamiento de la instalación.
+      </p>
+      <a class="cta" href="#projects">¡Leer más!</a>
+    </section>
+
+
+
+
+<section class="services-grid-section">
+  <h2 class="section-subtitle">Servicios Especializados</h2>
+
+  <div class="grid-projects">
+    <div class="grid-card">
+      <div class="card-icon">🤝</div>
+      <h4>Consultoría y Diseño</h4>
+      <p>Asesoramos y desarrollamos soluciones técnicas a medida para tus proyectos de infraestructura eléctrica.</p>
+    </div>
+
+    <div class="grid-card">
+      <div class="card-icon">🧩</div>
+      <h4>Gestión de Proyectos</h4>
+      <p>Planificamos, ejecutamos y supervisamos proyectos eléctricos con un enfoque integral y eficiente.</p>
+    </div>
+
+    <div class="grid-card">
+      <div class="card-icon">📘</div>
+      <h4>Estudios Eléctricos</h4>
+      <p>Realizamos estudios de corto circuito, coordinación de protecciones, flujos de carga y más.</p>
+    </div>
+
+    <div class="grid-card">
+      <div class="card-icon">📝</div>
+      <h4>Permisología</h4>
+      <p>Gestionamos licencias, certificados, y autorizaciones ante entidades como MINEM, CIRA, CENEPRED y más.</p>
+    </div>
+
+    <div class="grid-card">
+      <div class="card-icon">📊</div>
+      <h4>Automatización de Reportes</h4>
+      <p>Optimizamos el análisis de datos técnicos mediante herramientas como Power BI, Excel y Power Query.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    
+  <section class="clientes-section">
+  <h2 class="clientes-title">Clientes satisfechos</h2>
+  <p class="clientes-subtitle">
+    En
+    <span class="highlight">Jau Consulting</span>, empresas grandes, medianas y pequeñas han depositado su confianza en nosotros gracias a la calidad de nuestros servicios. Brindamos una solución integral que abarca todas las fases del proyecto: análisis de factibilidad, ingeniería, instalación, montaje y puesta en marcha, operación y mantenimiento, hasta la entrega final con el comisionamiento de la instalación.
+  </p>
+
+<div class="clientes-grid">
+  <a href="https://www.applus.com/pe/es" class="logo-card" target="_blank">
+    <img src="img/Clientes/Applus_SinFondo.png" alt="Applus">
+  </a>
+  <a href="https://atlantica.com/sustainability/environmental-policy" class="logo-card" target="_blank">
+    <img src="img/Clientes/Atlantica_SinFondo.png" alt="Atlantica">
+  </a>
+  <a href="https://www.pluz.pe" class="logo-card" target="_blank">
+    <img src="img/Clientes/Enel_SinFondo.png" alt="Enel">
+  </a>
+  <a href="https://glexcorporation.com" class="logo-card" target="_blank">
+    <img src="img/Clientes/Glexco_SinFondo.png" alt="Glexco">
+  </a>
+  <a href="https://peru.isaenergia.com/sitepages/app/home.aspx" class="logo-card" target="_blank">
+    <img src="img/Clientes/Isa_SinFondo.png" alt="Isa">
+  </a>
+ <a href="https://www.kolpa.com.pe" class="logo-card" target="_blank">
+  <img src="img/Clientes/Kolpa_SinFondo.png" alt="Kolpa">
+</a>
+
+  </a>
+  <a href="http://www.sangaban.com.pe/index.aspx?seccion=8201" class="logo-card" target="_blank">
+    <img src="img/Clientes/SanGaban_SinFondo.png" alt="San Gabán">
+  </a>
+  <a href="https://sedemi.com" class="logo-card" target="_blank">
+    <img src="img/Clientes/Sedemi_SinFondo.png" alt="Sedemi">
+  </a>
+  <a href="https://www.sedime.fr" class="logo-card" target="_blank">
+    <img src="img/Clientes/SEDIME_SinFondo.png" alt="Sedime">
+  </a>
+  <a href="https://www.linkedin.com/company/zafranal/?originalSubdomain=pe" class="logo-card" target="_blank">
+    <img src="img/Clientes/Zafranal_SinFondo.png" alt="Zafranal">
+  </a>
+</div>
+</section>
+
+
+
+
+
+
+<section class="brochure-section">
+  <h2 class="brochure-title">Brochure</h2>
+  <p class="brochure-subtitle">
+    Obtén más información sobre nuestros servicios y experiencia.
+  </p>
+  <a href="ruta/del/brochure.pdf" class="brochure-button" target="_blank" download>
+    Descargar Brochure
+  </a>
+</section>
+
+
+
+
+  </div>
+
+
+
+
+
+  
+
+
+</main>
+
+    
+
+<!-- CONTENIDO PRINCIPAL -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- FOOTER: Se insertará dinámicamente desde footer.html -->
+    <footer id="footer-placeholder"></footer>
+
+    
+    <script src="js/script.js"></script>
+    <script>
+      const header = document.getElementById("header-placeholder");
+      const footer = document.getElementById("footer-placeholder");
+
+      if (header) {
+        fetch("header.html")
+          .then(res => res.text())
+          .then(data => {
+            header.innerHTML = data;
+            if (typeof inicializarTema === 'function') inicializarTema();
+          });
+      }
+
+      if (footer) {
+        fetch("footer.html")
+          .then(res => res.text())
+          .then(data => {
+            footer.innerHTML = data;
+          });
+      }
+    </script>
+    
+</body>
+</html>
