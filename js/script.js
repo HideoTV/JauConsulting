@@ -100,24 +100,25 @@ function inicializarHeader() {
   const logoImg = document.getElementById("logo-img");
   const html = document.documentElement;
 
-  // --- Menú lateral ---
+  // Menú
   if (menuToggle && sidebar && closeBtn) {
     menuToggle.addEventListener("click", () => sidebar.classList.add("active"));
     closeBtn.addEventListener("click", () => sidebar.classList.remove("active"));
   }
 
-  // ✅ Prefijo dinámico: "" en raíz, "../" en /pages/...
+  // Prefijo dinámico: "" en raíz, "../" en /pages/...
   const getPrefix = () => {
     const parts = window.location.pathname.replace(/^\/+|\/+$/g, "").split("/");
-    // "" => [""] -> length 1; "pages/experience.html" => ["pages","experience.html"] -> length 2
     const depth = parts[0] === "" ? 0 : parts.length;
     return depth > 1 ? "../" : "";
   };
 
-  // --- Tema y logo ---
+  // Tema + logo (usa SIEMPRE el mismo casing que en tus archivos reales)
   if ((themeToggle || themeToggleDrawer) && logoImg) {
     const prefix = getPrefix();
-    const LIGHT_LOGO = `${prefix}img/LogoJauPNG - Negro.PNG`;
+
+    // ⬇ Ajusta exactamente a como se llaman tus archivos en /img
+    const LIGHT_LOGO = `${prefix}img/LogoJauPNG - Negro.png`;
     const DARK_LOGO  = `${prefix}img/LogoJauPNG - Blanco.png`;
 
     const updateLogo = (theme) => {
@@ -140,30 +141,13 @@ function inicializarHeader() {
       if (themeToggleDrawer) themeToggleDrawer.checked = theme === "light";
     };
 
-    if (themeToggle) {
-      themeToggle.addEventListener("change", () => setTheme(themeToggle.checked ? "light" : "dark"));
-    }
-    if (themeToggleDrawer) {
-      themeToggleDrawer.addEventListener("change", () => setTheme(themeToggleDrawer.checked ? "light" : "dark"));
-    }
+    if (themeToggle) themeToggle.addEventListener("change", () => setTheme(themeToggle.checked ? "light" : "dark"));
+    if (themeToggleDrawer) themeToggleDrawer.addEventListener("change", () => setTheme(themeToggleDrawer.checked ? "light" : "dark"));
   }
 
   const overlay = document.querySelector(".overlay");
   if (overlay && sidebar) overlay.addEventListener("click", () => sidebar.classList.remove("active"));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
