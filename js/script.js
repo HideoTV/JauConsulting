@@ -34,17 +34,17 @@ function inicializarTema() {
 /*------------------------------------ HEADER ------------------------------*/
 // ✅ Resalta el link activo según la página actual
 function resaltarLinkActivo() {
-  // Obtener la ruta actual (nombre del archivo actual)
-  const path = window.location.pathname.split("/").pop();
+  // archivo actual (p. ej. "about.html"). Si es raíz "/" => "index.html"
+  const current = window.location.pathname.split("/").pop() || "index.html";
 
-  // Seleccionar todos los links del menú principal y sidebar
-  const links = document.querySelectorAll(".nav-links a, .sidebar-links a");
+  // En la home no hay link "Inicio" en el header, así que no resaltar nada
+  if (current === "index.html") return;
 
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href && href.endsWith(path)) {
-      link.classList.add("active-link");
-    }
+  // Compara por nombre de archivo (ignora rutas como ../pages/)
+  document.querySelectorAll(".nav-links a, .sidebar-links a").forEach(link => {
+    const href = link.getAttribute("href") || "";
+    const file = href.split("/").pop(); // p. ej. "about.html"
+    if (file === current) link.classList.add("active-link");
   });
 }
 
@@ -91,6 +91,91 @@ window.addEventListener('load', cerrarSidebarEnPantallasGrandes);
 
 // 👇 FUNCION para enlazar los botones del header recién cargado
 function inicializarHeader() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const closeBtn = document.getElementById("close-btn");
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeToggleDrawer = document.getElementById("theme-toggle-drawer");
+  const logoImg = document.getElementById("logo-img");
+  const html = document.documentElement;
+
+  // --- Menú lateral ---
+  if (menuToggle && sidebar && closeBtn) {
+    menuToggle.addEventListener("click", () => sidebar.classList.add("active"));
+    closeBtn.addEventListener("click", () => sidebar.classList.remove("active"));
+  }
+
+  // ✅ Prefijo dinámico: "" en raíz, "../" en /pages/...
+  const getPrefix = () => {
+    const parts = window.location.pathname.replace(/^\/+|\/+$/g, "").split("/");
+    // "" => [""] -> length 1; "pages/experience.html" => ["pages","experience.html"] -> length 2
+    const depth = parts[0] === "" ? 0 : parts.length;
+    return depth > 1 ? "../" : "";
+  };
+
+  // --- Tema y logo ---
+  if ((themeToggle || themeToggleDrawer) && logoImg) {
+    const prefix = getPrefix();
+    const LIGHT_LOGO = `${prefix}img/LogoJauPNG - Negro.PNG`;
+    const DARK_LOGO  = `${prefix}img/LogoJauPNG - Blanco.png`;
+
+    const updateLogo = (theme) => {
+      logoImg.src = theme === "light" ? LIGHT_LOGO : DARK_LOGO;
+    };
+
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    html.classList.remove("light", "dark");
+    html.classList.add(savedTheme);
+    if (themeToggle) themeToggle.checked = savedTheme === "light";
+    if (themeToggleDrawer) themeToggleDrawer.checked = savedTheme === "light";
+    updateLogo(savedTheme);
+
+    const setTheme = (theme) => {
+      html.classList.remove("light", "dark");
+      html.classList.add(theme);
+      localStorage.setItem("theme", theme);
+      updateLogo(theme);
+      if (themeToggle) themeToggle.checked = theme === "light";
+      if (themeToggleDrawer) themeToggleDrawer.checked = theme === "light";
+    };
+
+    if (themeToggle) {
+      themeToggle.addEventListener("change", () => setTheme(themeToggle.checked ? "light" : "dark"));
+    }
+    if (themeToggleDrawer) {
+      themeToggleDrawer.addEventListener("change", () => setTheme(themeToggleDrawer.checked ? "light" : "dark"));
+    }
+  }
+
+  const overlay = document.querySelector(".overlay");
+  if (overlay && sidebar) overlay.addEventListener("click", () => sidebar.classList.remove("active"));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function inicializarHeader2() {
   const menuToggle = document.getElementById("menu-toggle");
   const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("close-btn");
