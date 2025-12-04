@@ -1,216 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- METADATOS BÁSICOS -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jau Consulting</title>
+<html lang="es">
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAU Consulting | Ingeniería de Clase Mundial para Proyectos de Energía</title>
+  <meta name="description" content="Consultoría especializada en ingeniería, supervisión de obras y gestión de proyectos de energía. Soluciones integrales desde el concepto hasta la operación.">
+  <meta name="keywords" content="consultoría ingeniería, proyectos energía, supervisión obras, EPC, transmisión eléctrica, Perú">
+  <meta name="author" content="JAU Consulting">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JAU Consulting | Ingeniería de Clase Mundial">
+  <meta property="og:description" content="Consultoría especializada en ingeniería y gestión de proyectos de energía en Perú.">
+  <meta property="og:image" content="https://jauconsulting.com/img/Banner.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="../img/LogoJauPNG - Blanco.png" alt="JAU Consulting">
+      </a>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="services.html" class="nav-link">Servicios</a>
+        <a href="about.html" class="nav-link">Nosotros</a>
+        <a href="projects.html" class="nav-link">Proyectos</a>
+        <a href="contact.html" class="nav-link">Contacto</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Solicitar Consulta</a>
+      </nav>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-        <!-- Ícono de pestaña -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="services.html" class="nav-link">Servicios</a>
+      <a href="about.html" class="nav-link">Nosotros</a>
+      <a href="projects.html" class="nav-link">Proyectos</a>
+      <a href="contact.html" class="nav-link">Contacto</a>
+      <a href="contact.html" class="btn btn-primary">Solicitar Consulta</a>
+    </div>
+  </div>
 
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- MODO OSCURO POR DEFECTO SEGÚN LOCALSTORAGE -->
-    <script>
-      (function () {
-        const savedTheme = localStorage.getItem("theme");
-        document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
-      })();
-    </script>
-
-  </head>
-
-  <body>
-    <!-- HEADER: Se insertará dinámicamente desde header.html -->
-    <div id="header-container"></div>
-
-
-
-
-
-
-
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-<!-- CONTENIDO PRINCIPAL -->
-
-<main>
-  <div class="main-container">
+  <main>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
     <section class="hero">
-      <h1>Bienvenido</h1>
-      <h2 class="big-heading">Jau Consulting</h2>
-      <h3 class="medium-heading">Áreas de negocios y servicios</h3>
-      <p>
-        Nuestros servicios abarcan
-        <span class="highlight">todas las fases del proyecto:</span>
-        Análisis de factibilidad, ingeniería, instalación, montaje y puesta en marcha; operación, y mantenimiento, terminando el ciclo con el de comisionamiento de la instalación.
-      </p>
-      <a class="cta" href="pages/experience.html">¡Leer más!</a>
+      <div class="container">
+        <div class="hero-content animate-fade-in-up">
+          <div class="hero-eyebrow">
+            <i class="fas fa-bolt"></i>
+            Consultoría Especializada en Energía
+          </div>
+          
+          <h1 class="hero-title">
+            Ingeniería de <span class="text-gradient">clase mundial</span> 
+            para proyectos de energía
+          </h1>
+          
+          <p class="hero-subtitle">
+            Del concepto a la operación. Soluciones integrales que transforman 
+            la infraestructura energética del Perú con resultados medibles y 
+            compromiso con la excelencia.
+          </p>
+          
+          <div class="hero-ctas">
+            <a href="services.html" class="btn btn-primary">
+              <i class="fas fa-arrow-right"></i>
+              Conoce nuestros servicios
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+              Solicitar consulta gratuita
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SERVICES SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Nuestros Servicios</span>
+          <h2 class="section-title">Soluciones integrales de ingeniería</h2>
+          <p class="section-description">
+            Ofrecemos servicios técnicos de alto nivel adaptados a los desafíos 
+            del sector energético e industrial.
+          </p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="card service-card animate-fade-in-up delay-100">
+            <div class="card-icon">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h4 class="card-title">Ingeniería & Consultoría</h4>
+            <p class="card-description">
+              Ingeniería conceptual, prefactibilidad, factibilidad y diseño definitivo 
+              para proyectos de generación y transmisión.
+            </p>
+          </div>
+          
+          <div class="card service-card animate-fade-in-up delay-200">
+            <div class="card-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h4 class="card-title">Estudios Eléctricos</h4>
+            <p class="card-description">
+              Estudios de pre-operatividad, coordinación de protecciones, 
+              análisis de armónicos y flujos de carga.
+            </p>
+          </div>
+          
+          <div class="card service-card animate-fade-in-up delay-300">
+            <div class="card-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h4 class="card-title">Gerencia de Proyectos EPC</h4>
+            <p class="card-description">
+              Dirección integral de proyectos, supervisión técnica, control de 
+              cronogramas, costos y gestión de riesgos.
+            </p>
+          </div>
+          
+          <div class="card service-card animate-fade-in-up delay-400">
+            <div class="card-icon">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h4 class="card-title">Gestión Regulatoria</h4>
+            <p class="card-description">
+              Tramitación de permisos, concesiones, servidumbres e instrumentos 
+              ambientales ante MINEM, CIRA y CENEPRED.
+            </p>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="services.html" class="btn btn-ghost">
+            Ver todos los servicios
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         STATS SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item animate-fade-in-up delay-100">
+            <div class="stat-value">15+</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-item animate-fade-in-up delay-200">
+            <div class="stat-value">50+</div>
+            <div class="stat-label">Proyectos completados</div>
+          </div>
+          <div class="stat-item animate-fade-in-up delay-300">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Clientes satisfechos</div>
+          </div>
+          <div class="stat-item animate-fade-in-up delay-400">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">Soporte técnico</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CLIENTS SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section clients-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Clientes</span>
+          <h2 class="section-title">Empresas que confían en nosotros</h2>
+          <p class="section-description">
+            Líderes del sector energético han depositado su confianza en JAU Consulting 
+            para sus proyectos más críticos.
+          </p>
+        </div>
+        
+        <div class="clients-grid">
+          <a href="https://www.applus.com/pe/es" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Applus_SinFondo.png" alt="Applus">
+          </a>
+          <a href="https://atlantica.com" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Atlantica_SinFondo.png" alt="Atlantica">
+          </a>
+          <a href="https://www.pluz.pe" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Enel_SinFondo.png" alt="Enel">
+          </a>
+          <a href="https://glexcorporation.com" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Glexco_SinFondo.png" alt="Glexco">
+          </a>
+          <a href="https://peru.isaenergia.com" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Isa_SinFondo.png" alt="ISA">
+          </a>
+          <a href="https://www.kolpa.com.pe" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Kolpa_SinFondo.png" alt="Kolpa">
+          </a>
+          <a href="http://www.sangaban.com.pe" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/SanGaban_SinFondo.png" alt="San Gabán">
+          </a>
+          <a href="https://sedemi.com" class="client-logo" target="_blank" rel="noopener">
+            <img src="../img/Clientes/Sedemi_SinFondo.png" alt="Sedemi">
+          </a>
+        </div>
+      </div>
+    </section>
 
-<section class="services-grid-section">
-  <h2 class="section-subtitle">Servicios Especializados</h2>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content animate-fade-in-up">
+          <h2 class="cta-title">¿Listo para impulsar tu proyecto?</h2>
+          <p class="cta-description">
+            Agenda una consulta gratuita con nuestro equipo de expertos y descubre 
+            cómo podemos ayudarte a alcanzar tus objetivos.
+          </p>
+          <div class="hero-ctas" style="justify-content: center;">
+            <a href="contact.html" class="btn btn-primary animate-glow">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="../docs/BROCHURE - Jau Consulting.pdf" class="btn btn-secondary" download>
+              <i class="fas fa-download"></i>
+              Descargar brochure
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <div class="grid-projects">
-    <div class="grid-card">
-      <div class="card-icon">🤝</div>
-      <h4>Consultoría y Diseño</h4>
-      <p>Asesoramos y desarrollamos soluciones técnicas a medida para tus proyectos de infraestructura eléctrica.</p>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="../img/LogoJauPNG - Blanco.png" alt="JAU Consulting" style="height: 48px;">
+          </a>
+          <p>
+            Consultoría especializada en ingeniería, supervisión de obras y gestión 
+            de proyectos de energía en Perú.
+          </p>
+        </div>
+        
+        <div class="footer-column">
+          <h5 class="footer-heading">Servicios</h5>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Ingeniería & Consultoría</a>
+            <a href="services.html" class="footer-link">Estudios Eléctricos</a>
+            <a href="services.html" class="footer-link">Gerencia de Proyectos</a>
+            <a href="services.html" class="footer-link">Gestión Regulatoria</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h5 class="footer-heading">Empresa</h5>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">Sobre Nosotros</a>
+            <a href="projects.html" class="footer-link">Proyectos</a>
+            <a href="contact.html" class="footer-link">Contacto</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h5 class="footer-heading">Contacto</h5>
+          <div class="footer-links">
+            <a href="mailto:contacto@jauconsulting.com" class="footer-link">
+              <i class="fas fa-envelope"></i> contacto@jauconsulting.com
+            </a>
+            <a href="https://linkedin.com/company/jauconsulting" class="footer-link" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://wa.me/51999999999" class="footer-link" target="_blank">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © <span id="year">2025</span> JAU Consulting. Todos los derechos reservados.
+        </p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/company/jauconsulting" class="social-link" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/51999999999" class="social-link" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:contacto@jauconsulting.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
     </div>
+  </footer>
 
-    <div class="grid-card">
-      <div class="card-icon">🧩</div>
-      <h4>Gestión de Proyectos</h4>
-      <p>Planificamos, ejecutamos y supervisamos proyectos eléctricos con un enfoque integral y eficiente.</p>
-    </div>
-
-    <div class="grid-card">
-      <div class="card-icon">📘</div>
-      <h4>Estudios Eléctricos</h4>
-      <p>Realizamos estudios de corto circuito, coordinación de protecciones, flujos de carga y más.</p>
-    </div>
-
-    <div class="grid-card">
-      <div class="card-icon">📝</div>
-      <h4>Permisología</h4>
-      <p>Gestionamos licencias, certificados, y autorizaciones ante entidades como MINEM, CIRA, CENEPRED y más.</p>
-    </div>
-
-    <div class="grid-card">
-      <div class="card-icon">📊</div>
-      <h4>Automatización de Reportes</h4>
-      <p>Optimizamos el análisis de datos técnicos mediante herramientas como Power BI, Excel y Power Query.</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
+  <!-- Scripts -->
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
     
-  <section class="clientes-section">
-  <h2 class="clientes-title">Clientes satisfechos</h2>
-  <p class="clientes-subtitle">
-    En
-    <span class="highlight">Jau Consulting</span>, empresas grandes, medianas y pequeñas han depositado su confianza en nosotros gracias a la calidad de nuestros servicios. Brindamos una solución integral que abarca todas las fases del proyecto: análisis de factibilidad, ingeniería, instalación, montaje y puesta en marcha, operación y mantenimiento, hasta la entrega final con el comisionamiento de la instalación.
-  </p>
-
-<div class="clientes-grid">
-  <a href="https://www.applus.com/pe/es" class="logo-card" target="_blank">
-    <img src="img/Clientes/Applus_SinFondo.png" alt="Applus">
-  </a>
-  <a href="https://atlantica.com/sustainability/environmental-policy" class="logo-card" target="_blank">
-    <img src="img/Clientes/Atlantica_SinFondo.png" alt="Atlantica">
-  </a>
-  <a href="https://www.pluz.pe" class="logo-card" target="_blank">
-    <img src="img/Clientes/Enel_SinFondo.png" alt="Enel">
-  </a>
-  <a href="https://glexcorporation.com" class="logo-card" target="_blank">
-    <img src="img/Clientes/Glexco_SinFondo.png" alt="Glexco">
-  </a>
-  <a href="https://peru.isaenergia.com/sitepages/app/home.aspx" class="logo-card" target="_blank">
-    <img src="img/Clientes/Isa_SinFondo.png" alt="Isa">
-  </a>
- <a href="https://www.kolpa.com.pe" class="logo-card" target="_blank">
-  <img src="img/Clientes/Kolpa_SinFondo.png" alt="Kolpa">
-</a>
-
-  </a>
-  <a href="http://www.sangaban.com.pe/index.aspx?seccion=8201" class="logo-card" target="_blank">
-    <img src="img/Clientes/SanGaban_SinFondo.png" alt="San Gabán">
-  </a>
-  <a href="https://sedemi.com" class="logo-card" target="_blank">
-    <img src="img/Clientes/Sedemi_SinFondo.png" alt="Sedemi">
-  </a>
-  <a href="https://www.sedime.fr" class="logo-card" target="_blank">
-    <img src="img/Clientes/SEDIME_SinFondo.png" alt="Sedime">
-  </a>
-  <a href="https://www.linkedin.com/company/zafranal/?originalSubdomain=pe" class="logo-card" target="_blank">
-    <img src="img/Clientes/Zafranal_SinFondo.png" alt="Zafranal">
-  </a>
-</div>
-</section>
-
-
-
-
-
-
-<section class="brochure-section">
-  <h2 class="brochure-title">Brochure</h2>
-  <p class="brochure-subtitle">
-    Obtén más información sobre nuestros servicios y experiencia.
-  </p>
-  <a href="ruta/del/brochure.pdf" class="brochure-button" target="_blank" download>
-    Descargar Brochure
-  </a>
-</section>
-
-
-
-
-  </div>
-
-
-
-
-
-  
-
-
-</main>
-
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
     
-
-<!-- CONTENIDO PRINCIPAL -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    menuToggle?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
     
-    <!-- FOOTER: Se insertará dinámicamente desde footer.html -->
-    <footer id="footer-placeholder"></footer>
-
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
     
-    <script src="js/script.js"></script>
-    <script>
-      const header = document.getElementById("header-placeholder");
-      const footer = document.getElementById("footer-placeholder");
-
-      if (header) {
-        fetch("header.html")
-          .then(res => res.text())
-          .then(data => {
-            header.innerHTML = data;
-            if (typeof inicializarTema === 'function') inicializarTema();
-          });
-      }
-
-      if (footer) {
-        fetch("footer.html")
-          .then(res => res.text())
-          .then(data => {
-            footer.innerHTML = data;
-          });
-      }
-    </script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
     
+    document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
